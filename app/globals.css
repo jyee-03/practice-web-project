@@ -60,6 +60,7 @@ a:hover {
 }
 
 .text-box {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,6 +68,12 @@ a:hover {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 ul {

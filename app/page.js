@@ -5,7 +5,7 @@ export default function HomePage() {
         <div  className="text-box">
             <h2>Jordan Yee</h2>
             <div>
-                <img src="cool pic of me.jpg" width="400px" />
+                <img src="cool pic of me.jpg" className="profile-pic" />
             </div>
             <div>
                 <p><b>Age:</b> 21</p>

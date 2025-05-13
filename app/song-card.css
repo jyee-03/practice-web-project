@@ -6,20 +6,20 @@
   margin-top: 2rem;
   flex-wrap: wrap; /* responsive for smaller screens */
   box-sizing: border-box;
-  width: 100%; /* ensures the container doesn't stretch too far */
-  max-width: 1200px; /* optional: limit the width of the container */
-  margin: 0 auto; /* centers the entire container horizontally */
+  width: 100%;
+  max-width: 1200px;
+
 }
 
 .section {
-  position: relative; /* needed for positioning the vinyl */
+  position: relative;
   max-width: 350px;
   background-color: #1DB954;
   border-radius: 12px;
   padding: 1rem;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 1 1 300px; /* flexible width but not too small */
+  flex: 1 1 300px; /* flexible width but not too small - flex-grow, flex-shrink, flex-basis */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -33,7 +33,6 @@
   width: 100%;
   height: 350px;
   overflow: hidden;
-  margin: 0 auto; /* center the song card inside its section */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -49,14 +48,13 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 80%; /* Adjust width to fit better inside the card */
-  height: 80%; /* Adjust height accordingly */
+  width: 80%;
+  height: 80%; 
   transform: translate(-50%, -50%);
   opacity: 0;
   pointer-events: none;
-  z-index: 2;
-  object-fit: contain; /* Ensure the vinyl stays circular */
-  border-radius: 50%; /* Make sure it's a perfect circle */
+  object-fit: contain;
+  border-radius: 50%;
   transition: opacity 0.3s ease-in-out;
 }
 

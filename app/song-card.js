@@ -3,13 +3,11 @@ import './song-card.css';
 
 const SongCard = ({ imageSrc, audioSrc, title, author }) => {
   const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
 
   const handleMouseEnter = () => {
     const audio = audioRef.current;
     if (audio && audio.paused) {
       audio.play();
-      setIsPlaying(true);
     }
   };
 
@@ -18,7 +16,6 @@ const SongCard = ({ imageSrc, audioSrc, title, author }) => {
     if (audio && !audio.paused) {
       audio.pause();
       audio.currentTime = 0;
-      setIsPlaying(false);
     }
   };
 

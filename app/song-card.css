@@ -1,0 +1,88 @@
+.songs-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* responsive for smaller screens */
+  box-sizing: border-box;
+  width: 100%; /* ensures the container doesn't stretch too far */
+  max-width: 1200px; /* optional: limit the width of the container */
+  margin: 0 auto; /* centers the entire container horizontally */
+}
+
+.section {
+  position: relative; /* needed for positioning the vinyl */
+  max-width: 350px;
+  background-color: #1DB954;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px; /* flexible width but not too small */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.section:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.song-card {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  margin: 0 auto; /* center the song card inside its section */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.song-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.vinyl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%; /* Adjust width to fit better inside the card */
+  height: 80%; /* Adjust height accordingly */
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  object-fit: contain; /* Ensure the vinyl stays circular */
+  border-radius: 50%; /* Make sure it's a perfect circle */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.song-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-top: 1rem;
+}
+
+.song-author-text {
+  font-size: 15px;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.section:hover .vinyl {
+  opacity: 1;
+  animation: spin 1.8s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

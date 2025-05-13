@@ -18,6 +18,7 @@ export const metadata = {
                     <div className='nav-links'>
                         <Link href='/'>Home</Link>
                         <Link href='/about'>About</Link>
+                        <Link href='/fruit-quiz'>Fruit Quiz!</Link>
                     </div>
                 </nav>
             </header>
